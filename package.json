@@ -1,0 +1,16 @@
+{
+  "name": "pumpfun-relay",
+  "version": "1.0.0",
+  "description": "Relay pump.fun new token events from PumpPortal to a webhook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0",
+    "node-fetch": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
