@@ -40,6 +40,7 @@ function connect() {
       mint: data.mint,
       creator: data.traderPublicKey || data.creator || null,
       created_at: Math.floor(Date.now() / 1000),
+      initial_buy: data.initialBuy || 0,
     }];
 
     try {
