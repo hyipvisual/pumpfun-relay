@@ -36,14 +36,10 @@ function connect() {
     // Chỉ xử lý sự kiện tạo token mới (bỏ qua các message khác như xác nhận subscribe)
     if (!data || !data.mint) return;
 
-    // DEBUG TẠM: in toàn bộ payload thô ra log Railway để xác nhận đúng tên field
-    console.log('[relay][DEBUG] Raw payload:', JSON.stringify(data));
-
     const payload = [{
       mint: data.mint,
       creator: data.traderPublicKey || data.creator || null,
       created_at: Math.floor(Date.now() / 1000),
-      initial_buy: data.initialBuy || 0,
     }];
 
     try {
